@@ -1,0 +1,35 @@
+body {
+	margin:					1em;
+	padding:				0;
+	color:					#000;
+}
+#audioPlayer_play	{
+	display:				inline-block;
+	margin:					5px;
+	width:					24px;
+	height:					32px;
+	text-indent:			-400px;
+	background-repeat:		no-repeat;
+	background-image:		url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAgCAYAAAAIXrg4AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAMZJREFUeNq0lt0NgzAMhIPlfWAR1BXYpDBSxSCFiYr70CqKUH6cO0t+SEC++xxkIvP8eFuOgRRiOVkeJvJkCAxW+BOtD8tl318nkiAOOE1KENA0knkGockRQGik8j03TS2Bm0YcbW2i8RA00UjnZ16k6SUo0ghw7NzSIAluaSRw4k/DEqCcQdqiyVq0KaH4+i38WyjjYONNZbhGChRHhTJc9wo0jWtluPYIuH+ZynBdKwC5tijDdU4AfnVUhutUAO46jkuAAQD+jXZOTODXVwAAAABJRU5ErkJggg==);
+}
+#audioPlayer_stop	{
+	display:				inline-block;
+	margin:					5px;
+	width:					32px;
+	height:					32px;
+	text-indent:			-400px;
+	background-repeat:		no-repeat;
+	background-image:		url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACxJREFUeNrszUERAAAEADD0c/q3UYLfVmDZPfGp4plAIBAIBAKBQCC4sgIMAJggASlttpE8AAAAAElFTkSuQmCC);
+}
+p:hover	{
+	cursor:					pointer;
+	opacity:				0.8;
+}
+.recordinginfo	{
+	float:			left;
+	padding-bottom:	3em;
+}
+footer {
+	clear:both;
+	border-top:		3px double #000;
+}
