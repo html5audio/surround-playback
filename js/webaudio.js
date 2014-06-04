@@ -3,7 +3,7 @@
  */
 function Sound(source, level) {
 	if (!window.audioContext) {
-		audioContext = new webkitAudioContext();
+		audioContext = new AudioContext();
 	}
 	// test to see how many hardware channels we can output to
 	// if it's 6 or larger, we can play a 5.1 audio stream!
@@ -21,7 +21,7 @@ function Sound(source, level) {
 	that.source = source;
 	that.buffer = null;
 	that.isLoaded = false;
-	that.volume = audioContext.createGainNode();
+	that.volume = audioContext.createGain();
 	if (!level) {
 		that.volume.gain.value = 1;
 	}
@@ -50,7 +50,7 @@ Sound.prototype.play = function (playbackRate) {
 		playSound.connect(this.volume);
 		playSound.playbackRate.value = playbackRate;
 		this.volume.connect(audioContext.destination);
-		playSound.noteOn(0);
+		playSound.start(0);
 	}
 
 	// return the context so we can work with it later!
@@ -64,5 +64,5 @@ Sound.prototype.setVolume = function (level) {
 // pass the returned playSound context 
 // (from Sound.prototype.play) in order to stop sound playback
 Sound.prototype.killSound = function (context) {
-	context.noteOff(0);
+	context.stop(0);
 }
